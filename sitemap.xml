@@ -20,34 +20,7 @@
   </url>
   
   <url>
-    <loc>https://gabrielmmelo.github.io/wiki/Spaced%20repetition/</loc>
-    
-    <lastmod>2022-02-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://gabrielmmelo.github.io/404.html</loc>
-    
-    <lastmod>2022-02-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/wiki/202107161454-projetos-antecedem-tarefas/</loc>
-    
-    <lastmod>2022-02-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/wiki/hello-world/</loc>
     
     <lastmod>2022-02-02</lastmod>
     
@@ -119,27 +92,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://gabrielmmelo.github.io/tags/triage-no-anki/</loc>
-    <lastmod>2022-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/tags/test/</loc>
-    <lastmod>2022-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/categories/teste/</loc>
-    <lastmod>2022-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
