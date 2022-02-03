@@ -6,7 +6,7 @@
   <link href="https://gabrielmmelo.github.io/atom.xml" rel="self"/>
   
   <link href="https://gabrielmmelo.github.io/"/>
-  <updated>2022-02-03T11:41:55.877Z</updated>
+  <updated>2022-02-03T11:53:41.437Z</updated>
   <id>https://gabrielmmelo.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1-ssh-key-for-each-repository</title>
+    <link href="https://gabrielmmelo.github.io/wiki/1-ssh-key-for-each-repository/"/>
+    <id>https://gabrielmmelo.github.io/wiki/1-ssh-key-for-each-repository/</id>
+    <published>2022-02-03T11:53:41.437Z</published>
+    <updated>2022-02-03T11:53:41.437Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Usando-uma-chave-de-SSH-para-cada-repositorio-do-GitHub"><a href="#Usando-uma-chave-de-SSH-para-cada-repositorio-do-GitHub" class="headerlink" title="Usando uma chave de SSH para cada repositório do GitHub"></a>Usando uma chave de SSH para cada repositório do GitHub</h1><blockquote><p>Útil para projetos com acesso a submódulos restrito</p></blockquote><ol><li><p>Criar as ssh keys<br>Para cada repositório, repita o processo abaixo:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> o campo de e-mail é, na verdade, um campo para identificador da credencial. Pode ser qualquer nome distinguivel entre os repositórios (e.g. <span class="string">&quot;gabrielmelocomp@nome_do_repo&quot;</span>)</span></span><br><span class="line"></span><br><span class="line">ssh-keygen -t ed25519 -C &quot;email@email.com&quot;</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> altere o nome <span class="keyword">do</span> arquivo da chave para conter algum identificador <span class="keyword">do</span> repositorio</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> inicia o agente ssh</span></span><br><span class="line">eval &quot;$(ssh-agent -s)&quot;</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> adiciona a key</span> </span><br><span class="line">ssh-add ~/.ssh/nome_do_repositorio</span><br></pre></td></tr></table></figure></li><li><p>Incluir as keys como <code>deploy-keys</code> no GitHub em cada repositório</p></li><li><p>Criar o arquivo <code>~/.ssh/config</code> para manusear como  o uso das chaves em cada repositório</p></li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host repo_1</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/nome_repo_1</span><br><span class="line">        IdentitiesOnly yes</span><br><span class="line"></span><br><span class="line">Host repo_2</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/nome_repo_2</span><br><span class="line">        IdentitiesOnly yes</span><br></pre></td></tr></table></figure><h2 id="Extras"><a href="#Extras" class="headerlink" title="Extras"></a>Extras</h2><ul><li><p>Para aumentar o log dos comandos ssh executados pelo git:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export GIT_SSH_COMMAND=&#x27;ssh -v&#x27;</span><br></pre></td></tr></table></figure></li><li><p>Para realizar push dos submodules automaticamente, quando der push do repo raiz:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config push.recurseSubmodules on-demand</span><br></pre></td></tr></table></figure></li><li><p>Para realizar pull dos submodules automaticamente, quando der pull do repo raiz:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global submodule.recurse true</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Usando-uma-chave-de-SSH-para-cada-repositorio-do-GitHub&quot;&gt;&lt;a href=&quot;#Usando-uma-chave-de-SSH-para-cada-repositorio-do-GitHub&quot; class=&quot;h</summary>
+      
+    
+    
+    
+    
+    <category term="git" scheme="https://gabrielmmelo.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://gabrielmmelo.github.io/tags/github/"/>
+    
+    <category term="ssh" scheme="https://gabrielmmelo.github.io/tags/ssh/"/>
+    
+  </entry>
   
   <entry>
     <title>Spaced repetition</title>
