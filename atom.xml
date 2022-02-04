@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog do Melo</title>
+  
+  <subtitle>A Data blog</subtitle>
+  <link href="https://gabrielmmelo.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://gabrielmmelo.github.io/"/>
+  <updated>2022-02-04T19:02:09.947Z</updated>
+  <id>https://gabrielmmelo.github.io/</id>
+  
+  <author>
+    <name>Gabriel M. de Melo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Usando uma chave de SSH para cada repositório do GitHub</title>
+    <link href="https://gabrielmmelo.github.io/wiki/usando-uma-chave-de-ssh-para-cada-reposit%C3%B3rio-do-github/"/>
+    <id>https://gabrielmmelo.github.io/wiki/usando-uma-chave-de-ssh-para-cada-reposit%C3%B3rio-do-github/</id>
+    <published>2022-02-04T19:02:09.947Z</published>
+    <updated>2022-02-04T19:02:09.947Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Nobody can hurt me without my permission. <em>Mahatma Gandhi</em></p></blockquote><h1 id="Introducao"><a href="#Introducao" class="headerlink" title="Introdução"></a>Introdução</h1><p>…</p><blockquote><p>Útil para projetos com acesso a submódulos restrito</p></blockquote><h1 id="Passo-a-passo"><a href="#Passo-a-passo" class="headerlink" title="Passo a passo"></a>Passo a passo</h1><h2 id="1-Crie-as-ssh-keys"><a href="#1-Crie-as-ssh-keys" class="headerlink" title="1. Crie as ssh keys:"></a>1. Crie as ssh keys:</h2><p>Para cada repositório, repita o processo abaixo:</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># o campo de e-mail é, na verdade, um campo para identificador da credencial. Pode ser qualquer nome distinguivel entre os repositórios (e.g. &quot;gabrielmelocomp@nome_do_repo&quot;)ssh-keygen -t ed25519 -C &quot;email@email.com&quot;# altere o nome do arquivo da chave para conter algum identificador do submódulomv ~&#x2F;.ssh&#x2F;&lt;chave-com-nome-aleatorio&gt; ~&#x2F;.ssh&#x2F;&lt;identificador-submodulo&gt;# inicia o agente ssheval &quot;$(ssh-agent -s)&quot;# adiciona a key ssh-add ~&#x2F;.ssh&#x2F;nome_do_repositorio<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-Incluir-cada-key-criada-na-etapa-acima-como-deploy-keys-no-GitHub-em-seu-respectivo-repositorio"><a href="#2-Incluir-cada-key-criada-na-etapa-acima-como-deploy-keys-no-GitHub-em-seu-respectivo-repositorio" class="headerlink" title="2. Incluir cada key criada na etapa acima como deploy-keys no GitHub em seu respectivo repositório."></a>2. Incluir cada key criada na etapa acima como <code>deploy-keys</code> no GitHub em seu respectivo repositório.</h2><h2 id="3-Criar-o-arquivo-ssh-config-para-manusear-como-o-uso-das-chaves-em-cada-repositorio"><a href="#3-Criar-o-arquivo-ssh-config-para-manusear-como-o-uso-das-chaves-em-cada-repositorio" class="headerlink" title="3. Criar o arquivo ~/.ssh/config para manusear como  o uso das chaves em cada repositório"></a>3. Criar o arquivo <code>~/.ssh/config</code> para manusear como  o uso das chaves em cada repositório</h2><pre class="line-numbers language-config" data-language="config"><code class="language-config">Host submodulo_1        HostName github.com        User git        IdentityFile ~&#x2F;.ssh&#x2F;&lt;identificador-submodulo-1&gt;        IdentitiesOnly yesHost submodulo_2        HostName github.com        User git        IdentityFile ~&#x2F;.ssh&#x2F;&lt;identificador-submodulo-2&gt;        IdentitiesOnly yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="Extras"><a href="#Extras" class="headerlink" title="Extras"></a>Extras</h1><ul><li><p>Para aumentar o log dos comandos ssh executados pelo git:</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">export GIT_SSH_COMMAND&#x3D;&#39;ssh -v&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>Para realizar push dos submodules automaticamente, quando executar o <code>push</code> do repositório raiz:</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git config push.recurseSubmodules on-demand<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>Para realizar pull dos submodules automaticamente, quando der <code>pull</code> do repositório raiz:</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git config --global submodule.recurse true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Nobody can hurt me without my permission. &lt;em&gt;Mahatma Gandhi&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Introducao&quot;&gt;&lt;a href=&quot;#Introducao</summary>
+      
+    
+    
+    
+    <category term="general-computing" scheme="https://gabrielmmelo.github.io/categories/general-computing/"/>
+    
+    
+    <category term="draft" scheme="https://gabrielmmelo.github.io/tags/draft/"/>
+    
+    <category term="git" scheme="https://gabrielmmelo.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://gabrielmmelo.github.io/tags/github/"/>
+    
+    <category term="ssh" scheme="https://gabrielmmelo.github.io/tags/ssh/"/>
+    
+  </entry>
+  
+</feed>
