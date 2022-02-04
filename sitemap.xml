@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://gabrielmmelo.github.io/404.html</loc>
+    <loc>https://gabrielmmelo.github.io/about/index.html</loc>
     
     <lastmod>2022-02-04</lastmod>
     
@@ -11,9 +11,9 @@
   </url>
   
   <url>
-    <loc>https://gabrielmmelo.github.io/about/index.html</loc>
+    <loc>https://gabrielmmelo.github.io/404.html</loc>
     
-    <lastmod>2022-02-02</lastmod>
+    <lastmod>2022-02-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
