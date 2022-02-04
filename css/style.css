@@ -1026,21 +1026,40 @@ div.article-meta-button a:hover {
   position: static;
   font-family: Georgia, "Times New Roman", "Microsoft Yahei", serif;
   font-size: 1.1em;
+  font-style: italic;
+  text-align: right;
   margin: 0 -20px;
   padding: 10px 20px 10px 54px;
-  background: #fcfcfc;
-  border-left: 4px solid #eee;
+/*background: #fcfcfc*/
+/*background: #f6f5eb5e*/
+  border-left: 4px solid rgba(126,117,34,0.161);
 }
 .article-entry blockquote:before {
-  top: 20px;
+  top: 0px;
   left: -40px;
   float: left;
   content: "\f10d";
-  color: #e2e2e2;
-  font-size: 32px;
+/*color: #e2e2e2*/
+  color: rgba(126,117,34,0.161);
+  font-size: 25px;
   font-family: FontAwesome;
   text-align: center;
   position: relative;
+}
+.article-entry blockquote:after {
+  top: -20px;
+  left: -10px;
+  float: right;
+  content: "\f10e";
+/*color: #e2e2e2*/
+  color: rgba(126,117,34,0.161);
+  font-size: 25px;
+  font-family: FontAwesome;
+  text-align: center;
+  position: relative;
+}
+.article-entry blockquote p {
+  padding-right: 15%;
 }
 .article-entry blockquote footer {
   font-size: 14px;
