@@ -2,18 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://gabrielmmelo.github.io/wiki/usando-uma-chave-de-ssh-para-cada-reposit%C3%B3rio-do-github/</loc>
+    <loc>https://gabrielmmelo.github.io/categories/index.html</loc>
     
-    <lastmod>2022-02-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/index.html</loc>
-    
-    <lastmod>2022-02-04</lastmod>
+    <lastmod>2022-02-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +13,25 @@
   <url>
     <loc>https://gabrielmmelo.github.io/about/index.html</loc>
     
-    <lastmod>2022-02-04</lastmod>
+    <lastmod>2022-02-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://gabrielmmelo.github.io/index.html</loc>
+    
+    <lastmod>2022-02-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://gabrielmmelo.github.io/wiki/usando-uma-chave-de-ssh-para-cada-reposit%C3%B3rio-do-github/</loc>
+    
+    <lastmod>2022-02-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -32,15 +41,6 @@
     <loc>https://gabrielmmelo.github.io/404.html</loc>
     
     <lastmod>2022-02-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-02-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +58,7 @@
 
   <url>
     <loc>https://gabrielmmelo.github.io/</loc>
-    <lastmod>2022-02-04</lastmod>
+    <lastmod>2022-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -66,28 +66,28 @@
   
   <url>
     <loc>https://gabrielmmelo.github.io/tags/draft/</loc>
-    <lastmod>2022-02-04</lastmod>
+    <lastmod>2022-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://gabrielmmelo.github.io/tags/git/</loc>
-    <lastmod>2022-02-04</lastmod>
+    <lastmod>2022-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://gabrielmmelo.github.io/tags/github/</loc>
-    <lastmod>2022-02-04</lastmod>
+    <lastmod>2022-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://gabrielmmelo.github.io/tags/ssh/</loc>
-    <lastmod>2022-02-04</lastmod>
+    <lastmod>2022-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -96,7 +96,7 @@
   
   <url>
     <loc>https://gabrielmmelo.github.io/categories/general-computing/</loc>
-    <lastmod>2022-02-04</lastmod>
+    <lastmod>2022-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
