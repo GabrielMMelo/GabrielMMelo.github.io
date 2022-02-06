@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://gabrielmmelo.github.io/wiki/usando-uma-chave-de-ssh-para-cada-reposit%C3%B3rio-do-github/</loc>
-    
-    <lastmod>2022-02-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://gabrielmmelo.github.io/404.html</loc>
     
     <lastmod>2022-02-04</lastmod>
@@ -64,41 +55,6 @@
   </url>
 
   
-  <url>
-    <loc>https://gabrielmmelo.github.io/tags/draft/</loc>
-    <lastmod>2022-02-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/tags/git/</loc>
-    <lastmod>2022-02-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/tags/github/</loc>
-    <lastmod>2022-02-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/tags/ssh/</loc>
-    <lastmod>2022-02-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/categories/general-computing/</loc>
-    <lastmod>2022-02-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
