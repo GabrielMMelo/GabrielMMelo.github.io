@@ -946,6 +946,11 @@ div.article-meta-button a:hover {
   line-height: 1.6em;
   margin: 1.2em 0;
 }
+.article-entry p em,
+.article-entry table em {
+  font-variant: small-caps;
+  font-size: 1.2em;
+}
 @media screen and (min-width: 600px) {
   .article-entry .article-content > p:nth-child(1)::first-letter,
   .article-entry .article-content > p:first-of-type::first-letter {
