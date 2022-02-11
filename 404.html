@@ -89,15 +89,55 @@
         }
         .description {
             display:none;
-            position:absolute;
+            position:fixed;
             border:1px solid #000;
-            /*left: 10%;*/
-            width: 300px;
+            top: 10%;
+            left: 10%;
+            width: 80%;
             height: 400px;
             z-index: 1000;
             overflow: hidden;
             margin: 0 auto;
         }
+        .close-button {
+            position: fixed;
+            z-index: 2000;
+            top: 7.5%;
+            right: 10%;
+            border-radius: 50%;
+            border: black 1px solid;
+            overflow: hidden;
+            border: none;
+            padding: 0;
+            width: 2em;
+            height: 2em;
+            background: #969696;
+            color: black;
+            font: inherit;
+            text-indent: 100%;
+            cursor: pointer;
+        }
+
+        .close-button:focus {
+             outline: solid 0 transparent;
+             box-shadow: 0 0 0 2px #8ed0f9
+         }
+
+        .close-button:hover {
+             background: #b6b6b6
+         }
+
+        .close-button:before, .close-button:after {
+                       position: absolute;
+                       top: 15%; left: calc(50% - .0625em);
+                       width: .125em; height: 70%;
+                       border-radius: .125em;
+                       transform: rotate(45deg);
+                       background: currentcolor;
+                       content: ''
+                   }
+
+        .close-button:after { transform: rotate(-45deg); }
     </style>
 <meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-dracula.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><script src="/js/prism.js"></script>
@@ -409,7 +449,55 @@
 <script>
     $(".tiptext").mouseover(function() {
         var element = $(this).children(".description")
-        var show = true;
+        var show = false;
+        //if (element.attr('data-hover').value) {console.log("exit", element); return;}
+        element.attr("data-hover", "y");
+        var stillHover = setInterval((element) => {
+            var show = false;
+            clearInterval(stillHover);
+            var dataHover = element.attr("data-hover")
+            if(dataHover == "y") {
+                show = true;
+                element.attr("data-hover", "n");
+            }
+            else {
+                show = false;
+            }
+
+            if (show) {
+                element.show();
+                if (!$('.close-button').length) {
+                    var closeButton = document.createElement("button");
+                    var buttonContent = document.createTextNode("x")
+                    closeButton.className = 'close-button'
+                    closeButton.appendChild(buttonContent)
+                    var elementGrandParent = element.parent().parent();
+                    elementGrandParent.append(closeButton);
+                    $('.close-button').on('click', function (e) {
+                        $('.description').hide();
+                        e.currentTarget.remove();
+                    });
+                }
+                var checkExist = setInterval((element) => {
+                    if (element.length) {
+                        clearInterval(checkExist);
+                        // copiar o elemento '.article'
+                        // apagar os elementos '#header', '.outer' e '#footer'
+                        console.log(element)
+                        var document_iframe = element[0].contentDocument || element[0].contentWindow.document;
+                        console.log(document_iframe)
+                        var article = document_iframe.childNodes[1].querySelector('.article')
+                        document_iframe.childNodes[1].querySelector('#header').remove()
+                        document_iframe.childNodes[1].querySelector('.outer').remove()
+                        document_iframe.childNodes[1].querySelector('#footer').remove()
+                        document_iframe.childNodes[1].querySelector('#container').appendChild(article)
+                        document_iframe.childNodes[1].querySelector('#container').css('height', 'auto');
+                        document_iframe.childNodes[1].querySelector('.article').css('margin', '20px 0');
+                        //element[0].contentWindow.scrollTo(0,400);
+                    }
+                }, 50, element);
+            }
+        }, 500, element);
         /*
         var request;
         if(window.XMLHttpRequest)
@@ -423,18 +511,15 @@
             show = false
         }
          */
-        if (show) {
-            element.show();
-            var checkExist = setInterval((element) => {
-                if (element.length) {
-                    clearInterval(checkExist);
-                    element[0].contentWindow.scrollTo(0,400);
-                }
-            }, 50, element);
-        }
     }).mouseout(function() {
-    $(this).children(".description").hide();
+        var element = $(this).children(".description")
+        element.attr('data-hover', "n")
+
+        //$(this).children(".description").hide();
+        //console.log($(this).children(".description").siblings())
+        //$(this).children(".description").siblings().map( (idx, e) => e.remove())
     });
+
 </script>
     </div>
 </body>
