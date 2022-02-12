@@ -4,7 +4,25 @@
   <url>
     <loc>https://gabrielmmelo.github.io/index.html</loc>
     
-    <lastmod>2022-02-06</lastmod>
+    <lastmod>2022-02-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://gabrielmmelo.github.io/blog/index.html</loc>
+    
+    <lastmod>2022-02-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://gabrielmmelo.github.io/404.html</loc>
+    
+    <lastmod>2022-02-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -20,18 +38,9 @@
   </url>
   
   <url>
-    <loc>https://gabrielmmelo.github.io/about/index.html</loc>
+    <loc>https://gabrielmmelo.github.io/author/index.html</loc>
     
     <lastmod>2022-02-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://gabrielmmelo.github.io/404.html</loc>
-    
-    <lastmod>2022-02-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +58,7 @@
 
   <url>
     <loc>https://gabrielmmelo.github.io/</loc>
-    <lastmod>2022-02-11</lastmod>
+    <lastmod>2022-02-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

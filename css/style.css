@@ -119,6 +119,7 @@ body {
   color: #565a5f;
   background: #ebeef1;
   font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  font-family: "Source Serif Pro";
   -webkit-text-size-adjust: 100%;
 }
 a {
@@ -388,10 +389,16 @@ code {
   display: inline-block;
 }
 .header-inner #logo .site-title {
-  font-size: 16px;
+  font-size: 20px;
+  font-variant: petite-caps;
   display: inline-block;
   vertical-align: top;
   font-weight: 600;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-top: #565a5f 2px solid;
+  border-bottom: #565a5f 2px solid;
+  margin-top: -2px;
 }
 #header-title {
   text-align: center;
@@ -475,6 +482,8 @@ code {
 }
 .main-nav-link {
   font-weight: 300;
+  font-family: "Source Serif Pro";
+  font-variant: small-caps;
 }
 @media screen and (min-width: 1200px) {
   #sub-nav {
@@ -513,10 +522,11 @@ code {
 }
 #search-form-wrap .search-form {
   position: relative;
+  text-align: right;
 }
 #search-form-wrap .search-form .search-form-input {
-  width: 100%;
-  padding: 0 30px 0 15px;
+  width: 20px;
+  padding: 0px;
   line-height: 40px;
   height: 40px !important;
   border-radius: 21px;
@@ -569,6 +579,13 @@ code {
   background: none !important;
   font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
   border: 1px solid #dfe1e2 !important;
+  border: 0 !important;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  width: 20px;
+  padding: 0px;
 }
 .search-form-input:focus,
 .search-form-input.ins-search-input:focus,
@@ -604,7 +621,6 @@ code {
 }
 #main-nav-mobile .menu .search-form-input {
   display: none;
-  padding: 0 10px;
   margin-right: 15px;
   height: 30px;
   line-height: 30px;
@@ -1060,6 +1076,7 @@ div.article-meta-button a:hover {
   padding: 10px 0;
 }
 .article-entry blockquote {
+  display: flow-root;
   position: static;
   font-family: Georgia, "Times New Roman", "Microsoft Yahei", serif;
   font-size: 1.1em;
@@ -1428,7 +1445,7 @@ div .article-more-link {
 }
 ol.toc {
   width: 100%;
-  margin: 1.6em 1em 2em 0;
+  margin: 0.6em 1em 2em 0;
   list-style-type: none;
   border: 3px #565a5f double;
 /*background-color: #EAE9DB*/
